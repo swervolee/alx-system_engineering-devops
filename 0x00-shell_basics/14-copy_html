@@ -1,2 +1,3 @@
 #!/bin/bash
-cp -n pwd*.html ..
+cp -ru --no-clobber --update --exclude='*' --include='*.html' . ../
+
