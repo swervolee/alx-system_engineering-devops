@@ -15,3 +15,4 @@
 | 10-no_more_js | removing all js files |
 | 11-directories | counts and prints both directories and sub directories |
 | 12-newest_files | prints the 10 newest files |
+| 13-unique | output uniques sorted files |
