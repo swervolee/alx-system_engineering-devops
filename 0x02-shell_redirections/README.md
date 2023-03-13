@@ -25,3 +25,4 @@
 | 20-hiago | delete specified letters (cC) in input |
 | 21-reverse | reverses the input |
 | 22-users_and_homes | prints the users and their home directories |
+| 100 empty casckets | prints all the empty dirs |
