@@ -19,3 +19,4 @@
 | 14-find that word | uses grep to find the pattern root |
 | 15-count that word | counts the amout of lines containing the word bin |
 | 16-whatsnext | prints three lines after the searched word |
+| 17-hidethis word | print all the lines that dont contain the word bin |
