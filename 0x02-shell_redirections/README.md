@@ -24,3 +24,4 @@
 | 19-AZ | change selected letters in a file|
 | 20-hiago | delete specified letters (cC) in input |
 | 21-reverse | reverses the input |
+| 22-users_and_homes | prints the users and their home directories |
