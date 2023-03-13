@@ -17,3 +17,4 @@
 | 12-newest_files | prints the 10 newest files |
 | 13-unique | output uniques sorted files |
 | 14-find that word | uses grep to find the pattern root |
+| 15-count that word | counts the amout of lines containing the word bin |
