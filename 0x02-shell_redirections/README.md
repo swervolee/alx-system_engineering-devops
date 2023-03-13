@@ -8,3 +8,4 @@
 | 3-twofiles | read two files at the same time|
 | 4-lastlines | prints 10 last lines in the file /etc/passwd |
 | 5-firstlines | prints the first 10 lines |
+| 6-third_line | prints the third line of file iacta |
