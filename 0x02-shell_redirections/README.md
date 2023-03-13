@@ -20,3 +20,4 @@
 | 15-count that word | counts the amout of lines containing the word bin |
 | 16-whatsnext | prints three lines after the searched word |
 | 17-hidethis word | print all the lines that dont contain the word bin |
+| 18-letters only | print only those lines that start with a letter |
