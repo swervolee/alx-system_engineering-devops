@@ -23,3 +23,4 @@
 | 18-letters only | print only those lines that start with a letter |
 | 19-AZ | change selected letters in a file|
 | 20-hiago | delete specified letters (cC) in input |
+| 21-reverse | reverses the input |
