@@ -10,3 +10,4 @@
 | 5-firstlines | prints the first 10 lines |
 | 6-third_line | prints the third line of file iacta |
 | 7-file | creates a file with a complicated syntax name |
+| 8-cwd_state | output redirection |
