@@ -5,3 +5,4 @@
 | 0x02-shell_redirction | prints hello world |
 | confused smiley | prints a confused smiley |
 | 2-hello | display contents of file /etc/passwd |
+| 3-twofiles | read two files at the same time|
