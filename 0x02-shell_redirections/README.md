@@ -21,3 +21,4 @@
 | 16-whatsnext | prints three lines after the searched word |
 | 17-hidethis word | print all the lines that dont contain the word bin |
 | 18-letters only | print only those lines that start with a letter |
+| 19-AZ | change selected letters in a file|
