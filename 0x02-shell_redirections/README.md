@@ -12,3 +12,4 @@
 | 7-file | creates a file with a complicated syntax name |
 | 8-cwd_state | output redirection |
 | 9-duplicate_last_line | create a duplicate of the last line |
+| 10-no_more_js | removing all js files |
