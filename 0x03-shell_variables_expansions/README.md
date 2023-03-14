@@ -13,3 +13,5 @@
 | 10 love eponent breath | a script to do exponentiation |
 | 11-binary_to_decimal | transforms from binary to base 10 |
 | 12-combinations | prints combination of the letter o and letters from a to z |
+| 13 print float | prints a variable with two floats |
+| 100 decimal to hexadecimal | translates a number from decimal to hexadecimal |
