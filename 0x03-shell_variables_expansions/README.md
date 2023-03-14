@@ -8,3 +8,4 @@
 | 5-local_variables | prints the local varaibles |
 | 6-create a local variable | creates a local variable |
 | 7-create_global_variable | creates a global variable |
+| 8 true knowledge | prints addidtion of 128 and env variable trueknowledge |
