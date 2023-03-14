@@ -11,3 +11,4 @@
 | 8 true knowledge | prints addidtion of 128 and env variable trueknowledge |
 | 9 divide and rule | division script |
 | 10 love eponent breath | a script to do exponentiation |
+| 11-binary_to_decimal | transforms from binary to base 10 |
