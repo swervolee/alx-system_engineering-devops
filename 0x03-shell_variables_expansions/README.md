@@ -6,3 +6,5 @@
 | 3-paths | counts the number of directories in PATH |
 | 4-global_variables | prints out the global variables |
 | 5-local_variables | prints the local varaibles |
+| 6-create a local variable | creates a local variable |
+| 7-create_global_variable | creates a global variable |
