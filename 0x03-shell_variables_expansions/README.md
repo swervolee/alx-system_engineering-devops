@@ -15,3 +15,4 @@
 | 12-combinations | prints combination of the letter o and letters from a to z |
 | 13 print float | prints a variable with two floats |
 | 100 decimal to hexadecimal | translates a number from decimal to hexadecimal |
+| 101-rot13 | performs rot 13 encrption |
