@@ -1,2 +1,2 @@
 #!/bin/bash
-NUM='0.00'
+NUM='%.2f'
