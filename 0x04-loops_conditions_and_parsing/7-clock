@@ -4,7 +4,7 @@
 i=0
 h=0
 
-while [ "$h" -lt 12 ]
+while [ "$h" -le 12 ]
 do
 	((i = i % 60))
 
