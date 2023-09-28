@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#parsing the /etc/passwd
+
+name="/etc/passwd"
+
+while read -r line
+do
+	echo "$line" | cut -d ":" -f1,3,6
+done < "$name"
