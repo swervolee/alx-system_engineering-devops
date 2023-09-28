@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #loops to 20 while printing strings intermitently
 
-i=0
+i=1
 
-while [ "$i" -lt 20 ]
+while [ "$i" -lt 21 ]
 do
 	echo "$i"
 	case "$i" in
