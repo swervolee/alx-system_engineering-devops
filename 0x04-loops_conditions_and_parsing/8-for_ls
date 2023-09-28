@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#does a listing of pwd files
+
+list=$(ls)
+
+for a in $list
+do
+	name=$(echo "$a" | cut -d "-" -f 2)
+	echo "$name"
+done
