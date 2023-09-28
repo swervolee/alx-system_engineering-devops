@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#a bash clock
+
+i=0
+h=0
+
+while [ "$h" -lt 12 ]
+do
+	((i = i % 60))
+
+
+	if [ "$i" -eq 0 ]
+	then
+		echo "Hour: $h"
+		((h++))
+	else
+		echo "$i"
+	fi
+
+
+	((i++))
+
+done
