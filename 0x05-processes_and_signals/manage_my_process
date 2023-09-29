@@ -1,4 +1,4 @@
-#!/usr/bin/usr bash
+#!/usr/bin/env bash
 #writes to a file
 
 file="/tmp/my_process"

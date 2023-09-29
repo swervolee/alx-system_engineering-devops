@@ -7,12 +7,21 @@ f="$1"
 
 if [ "$f" = start ]
 then
-		./manage_my_process
-		echo $$ >"$file"
+		./manage_my_process &
+		echo $! >"$file"
 		echo "manage_my_process started"
 elif [ "$f" = stop ]
 then
-	kill $(cat "$file")
+	kill "$(cat "$file")"
 	rm "$file"
 	echo "manage_my_process stopped"
+elif [ "$f" = restart ]
+then
+	kill "$(cat "$file")"
+	rm "$file"
+	./manage_my_process &
+	echo $! >"$file"
+	echo "manage_my_file restarted"
+else
+	echo "Usage: manage_my_process {start|stop|restart}"
 fi
