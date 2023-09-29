@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#outputs a listing of processes
+
+l=$(ps auxf)
+
+while read -r a
+do
+	if echo "$a" | grep -q "bash"
+	then
+		echo "$a"
+	fi
+done <<< "$l"
