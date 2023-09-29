@@ -4,8 +4,8 @@
 
 if [ $# -ne 1 ]
 then
-	echo "Usage: manage_my_process {start|stop|restart}"
-	exit 1
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit 1
 fi
 
 cm="$1"
@@ -13,22 +13,21 @@ file="/var/run/my_process.pid"
 
 if [ "$cm" = start ]
 then
-	./manage_my_process &
-	echo "$!" >"$file"
-	echo "manage_my_process started"
+    ./manage_my_process &
+    echo "$!" >"$file"
+    echo "manage_my_process started"
 elif [ "$cm" = stop ]
 then
-	rm "$file"
-	echo "manage_my_process stopped"
-	pkill -f manage_my_process
+    echo "manage_my_process stopped"
+    kill "$(cat /var/run/my_process.pid)"
+    rm "$file"
 elif [ "$cm" = restart ]
 then
-        pkill -f manage_my_process
-	rm "$file"
-	./manage_my_process &
-	echo "$!" >"$file"
-	echo "manage_my_process started"
+    kill "$(cat /var/run/my_process.pid)"
+    rm "$file"
+    ./manage_my_process &
+    echo "$!" >"$file"
+    echo "manage_my_process started"
 else
     echo "Usage: manage_my_process {start|stop|restart}"
-    exit 1
 fi
