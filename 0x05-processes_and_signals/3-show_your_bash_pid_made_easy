@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#bash pid without using ps
+
+l=$(pgrep "bash")
+
+while read -r a
+do
+	echo "$a bash"
+done <<< "$l"

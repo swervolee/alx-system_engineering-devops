@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#outputs a listing of processes
+#outputs a listing of processes with a bash filter
 
 l=$(ps auxf)
 
