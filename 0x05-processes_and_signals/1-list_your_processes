@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #outputs a listing of processes
 
-l=$(ps -u)
-echo "$l"
+ps auxf
