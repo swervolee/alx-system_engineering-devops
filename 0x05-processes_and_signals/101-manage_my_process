@@ -21,7 +21,7 @@ then
 	rm "$file"
 	./manage_my_process &
 	echo $! >"$file"
-	echo "manage_my_file restarted"
+	echo "manage_my_process restarted"
 else
 	echo "Usage: manage_my_process {start|stop|restart}"
 fi
