@@ -2,11 +2,6 @@
 #process manager
 
 
-if [ $# -ne 1 ]
-then
-    echo "Usage: manage_my_process {start|stop|restart}"
-    exit 1
-fi
 
 cm="$1"
 file="/var/run/my_process.pid"
