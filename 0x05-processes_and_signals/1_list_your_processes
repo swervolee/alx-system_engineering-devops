@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#outputs a listing of processes
-
-psauxf
