@@ -28,4 +28,7 @@ then
 	./manage_my_process &
 	echo "$!" >"$file"
 	echo "manage_my_process started"
+else
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit 1
 fi
