@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#creates and deletes a file
+
+file="/var/run/myscript.pid"
+
+echo $$ > "$file"
+
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap "echo I hate the kill command; rm $file; exit" SIGTERM
+	trap "echo 'Y U no love me?!'" SIGINT
+	trap "rm $file; exit" SIGQUIT
+
+done
