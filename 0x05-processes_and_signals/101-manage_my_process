@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#manages a process
+
+file="/var/run/my_process.pid"
+
+f="$1"
+
+if [ "$f" = start ]
+then
+		./manage_my_process
+		echo $$ >"$file"
+		echo "manage_my_process started"
+elif [ "$f" = stop ]
+then
+	kill $(cat "$file")
+	rm "$file"
+	echo "manage_my_process stopped"
+fi
