@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #outputs a listing of processes
 
-l=$(ps -e)
+l=$(ps -u -H)
 echo "$l"
