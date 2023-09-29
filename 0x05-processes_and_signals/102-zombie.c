@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  *infinite_while - an infinite while loop
@@ -34,6 +32,7 @@ int main(void)
 		if (f > 0)
 		{
 			printf("Zombie process created, PID: %d\n", getpid());
+			sleep(1);
 		}
 
 		else
