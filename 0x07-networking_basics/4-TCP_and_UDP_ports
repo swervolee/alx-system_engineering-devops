@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#shows ports that are in listening state
+
+netstat --listening --programs
