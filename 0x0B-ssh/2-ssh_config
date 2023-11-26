@@ -1,0 +1,4 @@
+#Editing the sshd_config file
+
+IdentifyFile ~/.ssh/school
+PasswordAuthentication no
