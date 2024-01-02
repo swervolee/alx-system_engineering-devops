@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
-#installs and configures nginx
+# Installs and configures nginx
 
+# Install nginx
 sudo apt-get -y install nginx
-sudo echo "Hello world">/var/www/html/index.ngix-debian.html
+
+# Create a simple HTML file with "Hello World!"
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
+
+# Change the listen directive in the default Nginx site configuration
 sudo sed -i 's/listen [0-9]\+/listen 80/' /etc/nginx/sites-available/default
-sudo /etc/init.d/nginx restart
+
+# Restart Nginx
+sudo service nginx restart
