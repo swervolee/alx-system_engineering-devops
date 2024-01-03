@@ -2,8 +2,8 @@
 # Adds a 301 redirection
 
 
-#sudo apt-get -y update
-#sudo apt-get -y install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo ufw allow 'Nginx HTTP'
