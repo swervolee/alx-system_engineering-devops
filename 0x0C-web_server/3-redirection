@@ -4,8 +4,8 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo chown -R $USER:$USER /var/www/html/index.nginx-debian.html
-sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo service nginx start
 
 new_string='\\tlocation /redirect_me {\n\t\treturn 301 http:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n       }'
