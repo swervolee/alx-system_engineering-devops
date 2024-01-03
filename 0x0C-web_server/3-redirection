@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 # Adds a 301 redirection
 
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo chown -R $USER:$USER /var/www/html/index.nginx-debian.html
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo service nginx start
+
 new_string='\\tlocation /redirect_me {\n\t\treturn 301 http:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n       }'
 
 sudo sed -i '/^server {/a '"$new_string" /etc/nginx/sites-available/default
+
+sudo service nginx start
