@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-#configuring the 404 page
+# Adds a 301 redirection
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 echo "Hello World" | sudo tee /var/www/html/index
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
-sudo sed -i '/listen 80 default_server/a \\trewrite ^/redirect_me https://https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\troot /usr/share/nginx/html;\n\tinternal;\n}' /etc/nginx/sites-available/default
-sudo systemctl restart nginx
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sudo sed -i "46i error_page 404 /custom_404.html;" /etc/nginx/sites-available/default
+sudo service nginx restart
