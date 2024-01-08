@@ -15,8 +15,8 @@ frontend myfrontend
 	default_backend myservers
 backend myservers
 	balance roundrobin
-	server 340120-web-01 34.203.29.111
-	server 240120-web-02 3.84.158.149
+	server 340120-web-01 34.203.29.111 check
+	server 240120-web-02 3.84.158.149 check
 " >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
