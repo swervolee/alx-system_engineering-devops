@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#installs and configures nginx in a new ubuntu
+# shellcheck disable=SC2154
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo sed -i '0,/location \/ {/s/add_header Custom-Header "$HOSTNAME";/add_header X-Served-By: "$HOSTNAME";/' /etc/nginx/sites-available/default
+sudo service nginx start
