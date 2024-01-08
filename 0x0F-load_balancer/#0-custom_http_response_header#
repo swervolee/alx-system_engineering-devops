@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #server configuration
-# shellcheck disable=SC2154
-
+# shellcheck di
 apt-get update
 apt-get install -y nginx
 
@@ -29,4 +28,4 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
-sudo service nginx start
+service nginx restart
