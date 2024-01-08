@@ -11,8 +11,9 @@ frontend myfrontend
 	bind 127.0.0.1:80
 	default_backend myservers
 backend myservers
+	balance roundrobin
 	server 340120-web-01 34.203.29.111
 	server 240120-web-02 3.84.158.149
 " >> /etc/haproxy/haproxy.cfg
 
-sudo service haproxy restart
+sudo service haproxy start
