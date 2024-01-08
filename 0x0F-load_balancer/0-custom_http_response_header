@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+#server configuration
+# shellcheck disable=SC2154
+
 apt-get update
 apt-get install -y nginx
 
