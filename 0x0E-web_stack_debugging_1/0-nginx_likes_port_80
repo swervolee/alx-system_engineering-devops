@@ -3,4 +3,7 @@
 
 sudo apt update -y --fix-missing
 sudo apt-get -y install nginx
-sudo service nginx start
+cd /etc/nginx/sites-enabled
+rm default
+ln -s /etc/nginx/sites-available/default default
+sudo service nginx restart
