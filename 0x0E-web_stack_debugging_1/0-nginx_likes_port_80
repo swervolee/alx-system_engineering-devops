@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #debugs nginx
 
-cd /etc/nginx/sites-enabled || exit;
-rm default
-ln -s /etc/nginx/sites-available/default default
-sudo service nginx restart
+sudo apt update -y --fix-missing
+sudo apt-get -y install nginx
+sudo service start nginx
