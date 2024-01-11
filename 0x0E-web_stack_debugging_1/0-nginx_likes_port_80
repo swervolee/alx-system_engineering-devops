@@ -3,4 +3,4 @@
 
 sudo apt update -y --fix-missing
 sudo apt-get -y install nginx
-sudo service start nginx
+sudo service nginx start
