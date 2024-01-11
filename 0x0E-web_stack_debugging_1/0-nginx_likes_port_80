@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-#debugging containers nginx
-
-sudo apt update --fix-missing
-sudo apt-get -y install nginx
-sudo service nginx start
+cd /etc/nginx/sites-enabled || exit;
+rm default
+ln -s /etc/nginx/sites-available/default default
+sudo service nginx restart
