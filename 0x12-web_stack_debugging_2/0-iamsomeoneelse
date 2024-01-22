@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+#executes command whoami when given username
+
+if [ "$#" -ge 1 ]
+then
+    result=$(sudo -u $1 whoami)
+    echo "$result"
+fi
