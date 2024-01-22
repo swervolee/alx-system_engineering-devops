@@ -1,3 +1,5 @@
-sudo ufw allow ssh
+sudo apt-get -y install ufw
+sudo service ufw enable
+sudo ufw allow 22/ssh
 sudo ufw allow 80/tcp
 sudo ufw alloq 443/tcp
