@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#creates a compressed backup
+
+if [ "$#" -ge 1 ]
+then
+    mysqldump -u replica_user -p"$1" --all-databases > backup.sql)
+    timestamp=$(date +%d-%m-%Y)
+    file_name="${timestamp}.tar.gz"
+    tar -czvf "$file_name" backup.sql
+fi
