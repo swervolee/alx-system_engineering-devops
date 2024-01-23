@@ -3,6 +3,6 @@
 
 if [ "$#" -ge 1 ]
 then
-    result=$(sudo -u $1 whoami)
+    result=$(sudo -u "$1" whoami)
     echo "$result"
 fi
