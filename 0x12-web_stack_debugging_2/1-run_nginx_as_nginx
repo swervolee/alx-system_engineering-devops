@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 #changes nginx ownership
 groupadd -r nginx
 useradd nginx -r -g nginx -d /var/cache/nginx -s /sbin/nologin
