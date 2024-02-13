@@ -3,7 +3,7 @@
 import requests
 
 
-def number_of_subscribers(subreddit=None):
+def number_of_subscribers(subreddit):
     """Function to retrieve the number of subscribers for a given subreddit"""
 
     if not subreddit or not isinstance(subreddit, str):
