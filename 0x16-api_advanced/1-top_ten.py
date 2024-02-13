@@ -8,8 +8,7 @@ def top_ten(subreddit):
     """Gets top 10 hottests post"""
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {"limit": 10}
-    headers = {'User-Agent': '0x16-api_advanced:project:\
-    v1.0.0 (by /u/firdaus_cartoon_jr)'}
+    headers = {'User-Agent': "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"}
 
     if not subreddit or not isinstance(subreddit, str):
         print("None")
