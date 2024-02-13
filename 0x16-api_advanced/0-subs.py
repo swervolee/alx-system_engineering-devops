@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Counts number of subs"""
 import requests
 
 def number_of_subscribers(subreddit=None):
