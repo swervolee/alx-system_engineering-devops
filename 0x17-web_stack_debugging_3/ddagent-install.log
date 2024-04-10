@@ -1,0 +1,78 @@
+[34m
+* Datadog Agent 7 install script v1.26.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+[01;32m*[00m Authentication request for user "rhlee" (sudo)
+[01;32m*[00m Authentication device "my-usb-stick" is connected.
+[01;32m*[00m Performing one time pad verification...
+[01;32m*[00m Access granted.
+Hit:1 http://ke.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ke.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://repo.mysql.com/apt/ubuntu bionic InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Ign:5 http://ke.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Err:6 http://ke.archive.ubuntu.com/ubuntu jammy-backports Release
+  Redirection loop encountered
+Ign:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Ign:8 https://deb.tableplus.com/debian/22 tableplus InRelease
+Ign:9 https://deb.nodesource.com/node_18.x nodistro InRelease
+Ign:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Ign:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Err:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+  Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?)
+Ign:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Ign:8 https://deb.tableplus.com/debian/22 tableplus InRelease
+Ign:9 https://deb.nodesource.com/node_18.x nodistro InRelease
+Err:7 https://dl.google.com/linux/chrome/deb stable InRelease
+  Could not handshake: The TLS connection was non-properly terminated. [IP: 172.217.170.174 443]
+Ign:10 https://apt.datadoghq.com stable InRelease
+Ign:11 https://cli.github.com/packages stable InRelease
+Ign:12 https://ppa.launchpadcontent.net/vbernat/haproxy-2.9/ubuntu jammy InRelease
+Ign:8 https://deb.tableplus.com/debian/22 tableplus InRelease
+Ign:9 https://deb.nodesource.com/node_18.x nodistro InRelease
+Err:8 https://deb.tableplus.com/debian/22 tableplus InRelease
+  Could not handshake: The TLS connection was non-properly terminated. [IP: 172.66.43.77 443]
+Err:9 https://deb.nodesource.com/node_18.x nodistro InRelease
+  Could not handshake: The TLS connection was non-properly terminated. [IP: 172.67.10.205 443]
+Ign:10 https://apt.datadoghq.com stable InRelease
+Ign:11 https://cli.github.com/packages stable InRelease
+Ign:12 https://ppa.launchpadcontent.net/vbernat/haproxy-2.9/ubuntu jammy InRelease
+Ign:10 https://apt.datadoghq.com stable InRelease
+Ign:11 https://cli.github.com/packages stable InRelease
+Ign:12 https://ppa.launchpadcontent.net/vbernat/haproxy-2.9/ubuntu jammy InRelease
+Err:10 https://apt.datadoghq.com stable InRelease
+  Could not handshake: The TLS connection was non-properly terminated. [IP: 52.84.102.64 443]
+Err:11 https://cli.github.com/packages stable InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 185.199.109.153 443]
+Err:12 https://ppa.launchpadcontent.net/vbernat/haproxy-2.9/ubuntu jammy InRelease
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 185.125.190.80 443]
+Reading package lists...
+E: The repository 'http://ke.archive.ubuntu.com/ubuntu jammy-backports Release' no longer has a Release file.
+W: http://repo.mysql.com/apt/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/jammy-security/InRelease  Clearsigned file isn't valid, got 'NOSPLIT' (does the network require authentication?)
+E: The repository 'http://security.ubuntu.com/ubuntu jammy-security InRelease' is no longer signed.
+[31m'apt-get update' failed, the script will not install the latest version of apt-transport-https.[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.15).
+gnupg is already the newest version (2.2.27-3ubuntu2.1).
+apt-transport-https is already the newest version (2.4.11).
+The following packages were automatically installed and are no longer required:
+  firebird3.0-common firebird3.0-common-doc libbson-1.0-0 libfbclient2
+  libmemcached11 libmongoc-1.0-0 libmongocrypt0 libserf-1-1 libstd-rust-1.70
+  libstd-rust-1.71 libsvn1 libtommath1 libutf8proc2
+  linux-headers-6.2.0-39-generic linux-hwe-6.2-headers-6.2.0-39
+  linux-image-6.2.0-39-generic linux-modules-6.2.0-39-generic
+  linux-modules-extra-6.2.0-39-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 25 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0

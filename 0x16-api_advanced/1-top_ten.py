@@ -1,29 +1,42 @@
 #!/usr/bin/python3
-"""Has one functin that gets top 10 hottest post from a reddit API"""
+"""Fetches the top 10 hottest posts from a Reddit API endpoint."""
+
 import requests
 import sys
 
 
 def top_ten(subreddit):
-    """Gets top 10 hottests post"""
+    """Fetches the top 10 hottest posts from a specified subreddit.
+
+    Args:
+        subreddit (str): The subreddit to fetch posts from.
+
+    Returns:
+        None: If an invalid subreddit is provided or if there are no posts.
+        List[str]: The titles of the top 10 hottest posts.
+    """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {"limit": 10}
     headers = {'User-Agent': "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"}
 
+    # Check if subreddit is provided and is a string
     if not subreddit or not isinstance(subreddit, str):
         print("None")
         sys.exit()
 
     try:
-        r = requests.get(url,
-                         params=params,
-                         headers=headers)
-        r.raise_for_status
+        # Send GET request to Reddit API
+        response = requests.get(url, params=params, headers=headers)
+        response.raise_for_status()
 
-        data = r.json().get("data")
-
+        # Extract data from response
+        data = response.json().get("data")
         posts = data.get("children")
+
+        # Extract titles of top 10 posts
         titles = [post.get("data").get("title") for post in posts]
-        [print(item) for item in titles]
+
+        # Print titles of top 10 posts
+        [print(title) for title in titles]
     except Exception:
         print("None")
